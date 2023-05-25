@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void printArray(int arr[], int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
 int main(){
     int number[12];
     cout <<" value at 0" << number[0] << endl;
