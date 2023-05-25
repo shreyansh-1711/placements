@@ -37,7 +37,9 @@ int main(){
             dummy[i] = 1;
         }
         for(auto pr : primes){
-            int firstMultiple = 
+            int firstMultiple = (l/pr)*pr;
+            if(firstMultiple<l) firstMultiple+=pr;
+
             for(int j=max(firstMultiple,pr*pr);j<=r;j++){
                 dummy[j-l] = 0;
             }
