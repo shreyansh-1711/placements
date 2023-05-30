@@ -7,11 +7,13 @@ class Hero {
     int health;
 
     public:
+    char *name;
     char level;
 
     //deafult constructor
     Hero(){
         cout<<"Constructoe Called " << endl;
+        name = new char[100];
     }
 
     //paramatrized Constructor
@@ -26,13 +28,24 @@ class Hero {
         this->level=level;
     }
 
+    //copy constructor
+    Hero(Hero& temp) {
+
+        char *ch = new char[strlen(temp.name) + 1];
+        strcpy(ch, temp.name);
+        this->name = ch;
+
+        cout << "Copy constructor called" << endl;
+        this->health = temp.health;
+        this->level = temp.level;
+    }
 
      void print(){
         cout << endl;
-        // cout << "[ Name: " << this->name<< " ,";
+        cout << "[ Name: " << this->name<< " ,";
         cout << "health: " << this->health << " ,";
         cout <<"level: " << this->level << " ]";
-        // cout << endl << endl;
+        cout << endl << endl;
     }
 
 
@@ -52,19 +65,34 @@ class Hero {
     void setLevel(char ch) {
         level = ch;
     }
+
+    void setName(char name[]) {
+        strcpy(this->name, name);
+    }
+
 };
 
 int main() {
 
 
+    Hero hero1;
+
+    hero1.setHealth(12);
+    hero1.setLevel('D');
+    char name[7] = "Babbar";
+    hero1.setName(name);
+
+    hero1.print();
 
 
-    Hero suresh(70, 'C');
-    suresh.print();
-    // suresh.setHealth(70);
-    // suresh.setLevel('A');
+
+
+    // Hero suresh(70, 'C');
+    // suresh.print();
+    // // suresh.setHealth(70);
+    // // suresh.setLevel('A');
      
-    Hero ritesh(suresh);
+    // Hero ritesh(suresh);
 
 
 
