@@ -1,46 +1,46 @@
-/* TOPIC:  */
+// /* TOPIC:  */
 
-// TIME COMPLEXITY: O()
-// SPACE COMPLEXITY: O()
+// // TIME COMPLEXITY: O()
+// // SPACE COMPLEXITY: O()
 
-// REFERENCE: 
+// // REFERENCE: 
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-class Solution {
-public:
-    ListNode* reverseKGroup(ListNode* head, int k) {
-         ListNode* cursor = head;
-        for(int i = 0; i < k; i++){
-            if(cursor == nullptr) return head;
-            cursor = cursor->next;
-        }
+// class Solution {
+// public:
+//     ListNode* reverseKGroup(ListNode* head, int k) {
+//          ListNode* cursor = head;
+//         for(int i = 0; i < k; i++){
+//             if(cursor == nullptr) return head;
+//             cursor = cursor->next;
+//         }
 
-        ListNode* prev = NULL;
-        ListNode* curr = head;
-        ListNode* next = NULL;
+//         ListNode* prev = NULL;
+//         ListNode* curr = head;
+//         ListNode* next = NULL;
 
-        int count=0;
+//         int count=0;
 
-        while(curr != NULL && count < k){
-            next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
-            count++;
-        }
+//         while(curr != NULL && count < k){
+//             next = curr->next;
+//             curr->next = prev;
+//             prev = curr;
+//             curr = next;
+//             count++;
+//         }
         
-        if(next != NULL){
-            head->next = reverseKGroup(next,k);
-        }
-        return prev;
-    }
-};
+//         if(next != NULL){
+//             head->next = reverseKGroup(next,k);
+//         }
+//         return prev;
+//     }
+// };
 
-int main() {
+// int main() {
 
     
 
-    return 0;
-}
+//     return 0;
+// }
