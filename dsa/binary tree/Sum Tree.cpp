@@ -23,6 +23,7 @@ class Solution
         pair<bool,int> ans;
         if(leftAns && rightAns && condition){
             ans.first = true;
+            
             ans.second = 2*root->data ;
         }else{
             ans.first = false;
