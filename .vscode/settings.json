@@ -1,10 +1,6 @@
 {
     "files.associations": {
-        "ostream": "cpp",
-        "iostream": "cpp"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
-    },
-    "python.formatting.provider": "none"
+        "array": "cpp",
+        "string": "cpp"
+    }
 }
