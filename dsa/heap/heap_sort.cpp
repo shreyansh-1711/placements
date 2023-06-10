@@ -82,6 +82,15 @@ void heapify(int arr[], int n, int i){
     }
 }
 
+void headpSort(int arr[], int n){
+    int size = n;
+    while(size>1){
+        //step-1 swap
+        swap(arr[size], arr[1]);
+        size--;
+        heapify(arr, n, 1);
+    }
+}
 
 int main() {
 
