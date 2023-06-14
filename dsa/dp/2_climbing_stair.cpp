@@ -13,9 +13,6 @@ public:
         int ans = solve(n-1)+solve(n-2);
         return ans;
     }
-
-    
-    
     int climbStairs(int n) {
         return solve(n);
     }
