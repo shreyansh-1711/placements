@@ -21,6 +21,7 @@ bool solveMem(int n,vector<int> &a,int tar,vector<vector<int>>&dp){
         return dp[n][tar] = b1|b2;
     }
 
+
     bool canPartition(vector<int>& a) {
         int n = a.size();
         int sum =0;
